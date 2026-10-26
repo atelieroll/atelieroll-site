@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Hand-drawn surface patterns for children's apparel, nursery, wallpaper and stationery. License ready-made prints or commission a collection.">
+<meta property="og:title" content="atelieroll Patterns">
+<meta property="og:description" content="Hand-drawn prints for children's brands. 90+ ready-made patterns.">
+<meta property="og:image" content="https://atelieroll.com/img/026-001.jpg">
+<link rel="icon" href="img/026-001.jpg">
+<title>atelieroll Patterns</title>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}*{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a sample book. Hero patchwork of swatches, then a filterable swatch library with hang-tag labels. */
+:root{
+  --paper:#f4f5f7; --surface:#ffffff; --ink:#1c2140; --muted:#5b6280; --line:#dde0ea;
+  --cobalt:#3144c4; --blush:#f3d3d7; --tag:#eef0fa;
+  --display:"Young Serif",Georgia,"Times New Roman",serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#121529; --surface:#1a1e37; --ink:#eef0f8; --muted:#a3a9c4; --line:#2d3354;
+  --cobalt:#9eabff; --blush:#4a2f3a; --tag:#232846; color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121529; --surface:#1a1e37; --ink:#eef0f8; --muted:#a3a9c4; --line:#2d3354;
+  --cobalt:#9eabff; --blush:#4a2f3a; --tag:#232846; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--cobalt)}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;flex-wrap:wrap}
+.mark{font-family:var(--display);font-size:24px;color:var(--ink);text-decoration:none}
+nav.links{display:flex;gap:20px;flex-wrap:wrap}
+nav.links a{color:var(--ink);text-decoration:none;font-size:15px}
+nav.links a:hover{color:var(--cobalt)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding-block:56px 64px}
+.hero h1{font-size:clamp(34px,4.6vw,56px);line-height:1.08;margin-top:14px}
+.hero p.lede{font-size:18px;color:var(--muted);max-width:34em;margin:20px 0 0}
+.facts{display:flex;flex-wrap:wrap;gap:12px 28px;margin:32px 0 0;padding:0;list-style:none}
+.facts li{display:flex;flex-direction:column;min-width:0}
+.facts b{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1}
+.facts span{font-size:14px;color:var(--muted);max-width:15em}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{font:500 15px var(--body);border-radius:999px;padding:11px 20px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{opacity:.88}
+.patch{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;transform:rotate(-1.5deg)}
+.patch button{all:unset;cursor:pointer;aspect-ratio:1;max-width:100%;background-size:cover;background-position:center;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.patch button:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
+section{padding-block:72px;border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head h2{font-size:clamp(28px,3.4vw,40px);margin-top:6px}
+.sec-head p{color:var(--muted);max-width:34em;margin:0}
+.filters{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);padding-block:12px;margin-bottom:20px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.chip{font:500 14px var(--body);padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip small{font-family:var(--mono);font-size:12px;opacity:.7;margin-left:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:22px 18px}
+.card{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:3px;background:var(--tag);display:block}
+.card:hover img{filter:brightness(.96)}
+.card:focus-visible{outline:2px solid var(--cobalt);outline-offset:4px;border-radius:4px}
+.tagline{display:flex;align-items:baseline;gap:8px;min-width:0}
+.code{font-family:var(--mono);font-size:12px;background:var(--tag);padding:2px 6px;border-radius:3px;white-space:nowrap}
+.cname{font-weight:600;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cmeta{font-size:13px;color:var(--muted);margin-top:-6px}
+.mocks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.mocks figure{margin:0;min-width:0}
+.mocks img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;display:block}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
+.pair img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px;display:block}
+.pair .arrow{font-family:var(--mono);color:var(--muted)}
+.life{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) minmax(0,1.2fr);gap:20px;align-items:center;margin-top:48px}
+.life figure{margin:0;min-width:0}
+.life video,.life img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;display:block;background:var(--tag)}
+.life .arrow{font-family:var(--mono);color:var(--muted)}
+.life h3{font-size:24px;line-height:1.2;margin:6px 0 10px}
+.life p{color:var(--muted);margin:0}
+@media (max-width:900px){.life{grid-template-columns:1fr 1fr}.life .arrow{display:none}.lifetext{grid-column:1/-1}}
+.collab{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+.collab blockquote{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);line-height:1.3;margin:0}
+.collab ul{margin:0;padding-left:18px;color:var(--muted)}
+.collab li{margin-bottom:8px}
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.way{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:28px}
+.way h3{font-size:24px;margin:6px 0 10px}
+.way ul{margin:12px 0 0;padding-left:18px}
+.way li{margin-bottom:6px}
+.note{color:var(--muted);font-size:15px;margin-top:20px;max-width:46em}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.mailrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.mail{font-family:var(--mono);font-size:17px;background:var(--surface);border:1px solid var(--line);padding:10px 14px;border-radius:6px;user-select:all;word-break:break-all}
+.status{font-size:14px;color:var(--cobalt);min-height:1.4em}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
+dialog{border:none;padding:0;border-radius:8px;background:var(--surface);color:var(--ink);width:min(980px,calc(100vw - 32px));max-height:calc(100vh - 32px)}
+dialog::backdrop{background:rgba(10,12,30,.6)}
+.dlg{display:grid;grid-template-columns:1.3fr 1fr;min-height:0}
+.dlg img{width:100%;height:100%;max-height:calc(100vh - 32px);object-fit:cover;display:block}
+.dlg .info{padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0;overflow:auto}
+.dlg h3{font-size:30px}
+.dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px;margin:0}
+.dl dt{color:var(--muted)}
+.dl dd{margin:0}
+.close{align-self:flex-end;font:500 14px var(--body);background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
+.navrow{display:flex;gap:8px;margin-top:auto}
+@media (max-width:900px){
+  .hero .wrap,.collab,.contact .wrap{grid-template-columns:1fr}
+  .mocks{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr}
+  .ways{grid-template-columns:1fr}
+  .dlg{grid-template-columns:1fr}
+  .dlg img{max-height:55vh}
+}
+@media (max-width:480px){.grid{grid-template-columns:repeat(2,1fr);gap:16px 12px}.facts b{font-size:24px}}
+@media (prefers-reduced-motion:no-preference){.patch button{transition:transform .25s}.patch button:hover{transform:scale(1.03)}}
+</style>
+
+<header class="top"><div class="wrap">
+  <a class="mark" href="#top">atelieroll</a>
+  <nav class="links" aria-label="Sections">
+    <a href="#patterns">Patterns</a><a href="#process">Process</a><a href="#licensing">Licensing</a><a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">Hand-drawn surface patterns</div>
+    <h1>Prints for little ones, drawn with a mother’s eye.</h1>
+    <p class="lede">Ready-made patterns for children’s apparel, nursery, wallpaper and stationery. License a print as it is, or commission a collection made only for your brand.</p>
+    <ul class="facts">
+      <li><b id="countAll">92</b><span>ready-made patterns, each with a swatch number</span></li>
+      <li><b>6</b><span>collections with Sing Mui Heng, all sold out</span></li>
+      <li><b>5</b><span>countries: US, Singapore, Sweden, South Africa, Korea</span></li>
+    </ul>
+    <div class="cta"><a class="btn" href="#patterns">Browse patterns</a><a class="btn ghost" href="#contact">Ask for a quote</a></div>
+  </div>
+  <div class="patch" id="patch" aria-label="Featured patterns"></div>
+</div></div>
+
+<section id="patterns"><div class="wrap">
+  <div class="sec-head">
+    <div><div class="eyebrow">Pattern library</div><h2>Pick by swatch number</h2></div>
+    <p>Tap a pattern to see it larger. Every print can be rescaled, and most can be recoloured to match your season.</p>
+  </div>
+  <div class="filters" role="toolbar" aria-label="Filter patterns" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="products"><div class="wrap">
+  <div class="sec-head"><div><div class="eyebrow">On product</div><h2>How the prints wear</h2></div></div>
+  <div class="mocks" id="mocks"></div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="sec-head">
+    <div><div class="eyebrow">Process</div><h2>Painted by hand, then repeated</h2></div>
+    <p>Each pattern starts as gouache, watercolour or ink on paper. The motifs are scanned, cleaned and built into a seamless repeat. No AI-generated artwork.</p>
+  </div>
+  <div class="steps" id="steps"></div>
+  <div class="life">
+    <figure><video src="img/inspiration-reef.mp4" poster="img/inspiration-reef.jpg" autoplay muted loop playsinline aria-label="Moray eel and striped fish at an aquarium"></video><figcaption>Reference: reef animals, filmed July 2022</figcaption></figure>
+    <span class="arrow">→</span>
+    <figure><img src="img/049-001.jpg" alt="Abstract Animal Print pattern" loading="lazy"><figcaption><span class="code">049-001</span> Abstract Animal Print</figcaption></figure>
+    <div class="lifetext"><div class="eyebrow">From life to print</div><h3>Spots and stripes, painted from what we saw</h3><p>This print started at an aquarium. The eel’s honeycomb skin and the fish’s stripes became brushstrokes, then a repeat.</p></div>
+  </div>
+</div></section>
+
+<section id="collabs"><div class="wrap collab">
+  <blockquote>Six collections designed with Singapore fabric house Sing Mui Heng. Every one sold out.</blockquote>
+  <div>
+    <div class="eyebrow">Selected work</div>
+    <ul style="margin-top:12px">
+      <li>Sing Mui Heng, Singapore: six printed fabric collections</li>
+      <li>E&amp;S, Singapore: children’s clothing line</li>
+      <li>Brands and makers in the US, Sweden, South Africa and Korea</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="licensing"><div class="wrap">
+  <div class="sec-head"><div><div class="eyebrow">Licensing</div><h2>Two ways to work together</h2></div></div>
+  <div class="ways">
+    <div class="way">
+      <div class="eyebrow">Ready-made</div>
+      <h3>License an existing print</h3>
+      <p>Choose any pattern on this page by its swatch number.</p>
+      <ul><li>Scale adjusted to your product</li><li>Colour changes on request</li><li>Exclusive options available: the print is then removed from this library</li></ul>
+    </div>
+    <div class="way">
+      <div class="eyebrow">Custom</div>
+      <h3>A collection for your brand</h3>
+      <p>New artwork drawn for your season, owned by your brand.</p>
+      <ul><li>Hero print plus coordinating patterns</li><li>Two rounds of revisions</li><li>Exclusive to you</li></ul>
+    </div>
+  </div>
+  <p class="note">For a quote, send the swatch numbers you like and how you plan to use them: product type, quantity and region. Production files (AI, PSD or high-resolution TIFF) are delivered after the license is agreed.</p>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div>
+    <div class="eyebrow">Contact</div>
+    <h2 style="font-size:clamp(28px,3.4vw,40px);margin-top:6px">Tell us what you’re making.</h2>
+    <p style="color:var(--muted)">Studio run by designer Minhae Kim. Replies in English or Korean.</p>
+  </div>
+  <div>
+    <div class="mailrow"><span class="mail" id="mail">atelieroll.info@gmail.com</span><button class="btn" id="copyMail" type="button">Copy email</button></div>
+    <div class="status" id="mailStatus" aria-live="polite"></div>
+    <p><a href="https://www.instagram.com/atelieroll/">Instagram @atelieroll</a></p>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Previews are watermarked and shown at reduced size. © atelieroll. All artwork is original and hand-drawn.</div></footer>
+
+<dialog id="dlg" aria-labelledby="dName">
+  <div class="dlg">
+    <img id="dImg" alt="">
+    <div class="info">
+      <button class="close" id="dClose" type="button">Close</button>
+      <span class="code" id="dCode" style="align-self:flex-start"></span>
+      <h3 id="dName"></h3>
+      <dl class="dl">
+        <dt>Collection</dt><dd id="dColl"></dd>
+        <dt>Repeat</dt><dd id="dRep"></dd>
+        <dt>Season</dt><dd id="dSea"></dd>
+        <dt>Suits</dt><dd id="dUse"></dd>
+        <dt>Colourways</dt><dd id="dCw"></dd>
+      </dl>
+      <button class="btn" id="dCopy" type="button">Copy inquiry text</button>
+      <div class="status" id="dStatus" aria-live="polite"></div>
+      <div class="navrow"><button class="close" id="dPrev" type="button">← Previous</button><button class="close" id="dNext" type="button">Next →</button></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const DATA={"items": [{"code": "026-001", "name": "Jungle Friends", "collection": "Safari", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Apparel", "Wallpaper"], "colorways": 2, "tags": ["kids"], "img": "img/026-001.jpg", "hero": true}, {"code": "027-003", "name": "Soft Rainbow", "collection": "Dreamy Rainbow", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Bedding", "Wallpaper"], "colorways": 1, "tags": ["kids"], "img": "img/027-003.jpg", "hero": true}, {"code": "029-001", "name": "Caturday", "collection": "Animal Series", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Apparel", "Stationery"], "colorways": 1, "tags": ["kids"], "img": "img/029-001.jpg", "hero": true}, {"code": "032-002", "name": "Doodle Garden", "collection": "Dreamy Dayz", "repeat": "All-over", "season": "Spring", "use": ["Baby & kids", "Apparel", "Stationery"], "colorways": 2, "tags": ["kids"], "img": "img/032-002.jpg", "hero": true}, {"code": "034-002", "name": "Winter Pups", "collection": "Winter", "repeat": "All-over", "season": "Holiday", "use": ["Baby & kids", "Apparel"], "colorways": 1, "tags": ["kids", "holiday"], "img": "img/034-002.jpg", "hero": true}, {"code": "035-001", "name": "Little Whales", "collection": "Under the Sea", "repeat": "All-over", "season": "Summer", "use": ["Baby & kids", "Apparel", "Bedding"], "colorways": 1, "tags": ["kids"], "img": "img/035-001.jpg", "hero": true}, {"code": "043-002", "name": "Deer in the Woods", "collection": "Winter Woodland", "repeat": "All-over", "season": "Winter", "use": ["Baby & kids", "Fabric", "Wallpaper"], "colorways": 1, "tags": ["kids", "holiday"], "img": "img/043-002.jpg", "hero": true}, {"code": "045-002", "name": "Mint Tigers", "collection": "CNY", "repeat": "All-over", "season": "Lunar New Year", "use": ["Baby & kids", "Apparel"], "colorways": 1, "tags": ["kids", "holiday"], "img": "img/045-002.jpg", "hero": true}, {"code": "039-001", "name": "Gingerbread", "collection": "Winterland", "repeat": "All-over", "season": "Holiday", "use": ["Holiday goods", "Gift wrap"], "colorways": 1, "tags": ["holiday"], "img": "img/039-001.jpg", "hero": true}, {"code": "017-003", "name": "Seashells", "collection": "Summer Memory", "repeat": "All-over", "season": "Summer", "use": ["Baby & kids", "Swimwear", "Accessories"], "colorways": 2, "tags": ["kids"], "img": "img/017-003.jpg", "hero": false}, {"code": "019-002", "name": "Little Trees", "collection": "My Favorite Things", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Apparel"], "colorways": 1, "tags": ["kids"], "img": "img/019-002.jpg", "hero": false}, {"code": "019-003", "name": "Potted Pilea", "collection": "My Favorite Things", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Accessories", "Stationery"], "colorways": 1, "tags": ["kids"], "img": "img/019-003.jpg", "hero": false}, {"code": "025-002", "name": "Rose Ditsy", "collection": "Backyard Garden", "repeat": "All-over", "season": "Spring", "use": ["Baby & kids", "Apparel"], "colorways": 3, "tags": ["kids"], "img": "img/025-002.jpg", "hero": false}, {"code": "025-005", "name": "Dot Stripe", "collection": "Backyard Garden", "repeat": "Stripe", "season": "All season", "use": ["Baby & kids", "Bedding"], "colorways": 2, "tags": ["kids"], "img": "img/025-005.jpg", "hero": false}, {"code": "027-001", "name": "Ice Cream Cone", "collection": "Dreamy Rainbow", "repeat": "All-over", "season": "Summer", "use": ["Baby & kids", "Apparel"], "colorways": 2, "tags": ["kids"], "img": "img/027-001.jpg", "hero": false}, {"code": "027-002", "name": "Play Button", "collection": "Dreamy Rainbow", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Apparel"], "colorways": 1, "tags": ["kids"], "img": "img/027-002.jpg", "hero": false}, {"code": "028-001", "name": "Mushroom & Flower", "collection": "At the Kitchen", "repeat": "All-over", "season": "Autumn", "use": ["Kitchen", "Accessories", "Baby & kids"], "colorways": 1, "tags": ["kids"], "img": "img/028-001.jpg", "hero": false}, {"code": "031-001", "name": "Nursery Rings", "collection": "Nursery Mood", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Bedding"], "colorways": 2, "tags": ["kids"], "img": "img/031-001.jpg", "hero": false}, {"code": "032-003", "name": "Blossom Vine", "collection": "Dreamy Dayz", "repeat": "All-over", "season": "Spring", "use": ["Baby & kids", "Apparel"], "colorways": 3, "tags": ["kids"], "img": "img/032-003.jpg", "hero": false}, {"code": "032-004", "name": "Tiny Sparkle", "collection": "Dreamy Dayz", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Bedding"], "colorways": 1, "tags": ["kids"], "img": "img/032-004.jpg", "hero": false}, {"code": "032-006", "name": "Petal Cross", "collection": "Dreamy Dayz", "repeat": "All-over", "season": "Spring", "use": ["Baby & kids", "Apparel"], "colorways": 3, "tags": ["kids"], "img": "img/032-006.jpg", "hero": false}, {"code": "032-007", "name": "Blossom Garland", "collection": "Dreamy Dayz", "repeat": "All-over", "season": "Spring", "use": ["Baby & kids", "Apparel"], "colorways": 2, "tags": ["kids"], "img": "img/032-007.jpg", "hero": false}, {"code": "033-001", "name": "Daisy Field", "collection": "Earthy Sunshine", "repeat": "All-over", "season": "Summer", "use": ["Apparel", "Baby & kids"], "colorways": 2, "tags": ["kids"], "img": "img/033-001.jpg", "hero": false}, {"code": "033-002", "name": "Ice Cream Line", "collection": "Earthy Sunshine", "repeat": "All-over", "season": "Summer", "use": ["Baby & kids", "Apparel"], "colorways": 1, "tags": ["kids"], "img": "img/033-002.jpg", "hero": false}, {"code": "033-003", "name": "Hello Summer Sunglasses", "collection": "Earthy Sunshine", "repeat": "All-over", "season": "Summer", "use": ["Apparel", "Accessories"], "colorways": 1, "tags": ["kids"], "img": "img/033-003.jpg", "hero": false}, {"code": "035-002", "name": "Wave Crest", "collection": "Under the Sea", "repeat": "All-over", "season": "Summer", "use": ["Baby & kids", "Apparel"], "colorways": 1, "tags": ["kids"], "img": "img/035-002.jpg", "hero": false}, {"code": "037-001", "name": "Bori (Barley)", "collection": "Baby Solid", "repeat": "All-over", "season": "Autumn", "use": ["Baby & kids", "Bedding"], "colorways": 1, "tags": ["kids"], "img": "img/037-001.jpg", "hero": false}, {"code": "037-002", "name": "Oksusu (Corn)", "collection": "Baby Solid", "repeat": "All-over", "season": "Summer", "use": ["Baby & kids", "Bedding"], "colorways": 1, "tags": ["kids"], "img": "img/037-002.jpg", "hero": false}, {"code": "038-001", "name": "Orange Grove", "collection": "Fruits", "repeat": "All-over", "season": "Summer", "use": ["Kitchen", "Apparel", "Accessories"], "colorways": 1, "tags": ["kids"], "img": "img/038-001.jpg", "hero": false}, {"code": "043-003", "name": "Snow Stars", "collection": "Winter Woodland", "repeat": "All-over", "season": "Winter", "use": ["Baby & kids", "Fabric"], "colorways": 1, "tags": ["kids", "holiday"], "img": "img/043-003.jpg", "hero": false}, {"code": "043-007", "name": "Tiny Cross", "collection": "Winter Woodland", "repeat": "All-over", "season": "Winter", "use": ["Baby & kids", "Bedding"], "colorways": 2, "tags": ["kids", "holiday"], "img": "img/043-007.jpg", "hero": false}, {"code": "045-001", "name": "Tiger Meadow", "collection": "CNY", "repeat": "All-over", "season": "Lunar New Year", "use": ["Baby & kids", "Apparel"], "colorways": 2, "tags": ["kids", "holiday"], "img": "img/045-001.jpg", "hero": false}, {"code": "045-004", "name": "Lantern Drops", "collection": "CNY", "repeat": "All-over", "season": "Lunar New Year", "use": ["Baby & kids"], "colorways": 1, "tags": ["kids", "holiday"], "img": "img/045-004.jpg", "hero": false}, {"code": "046-001", "name": "Garden Confetti", "collection": "Light Delight", "repeat": "All-over", "season": "Spring", "use": ["Baby & kids", "Bedding"], "colorways": 1, "tags": ["kids"], "img": "img/046-001.jpg", "hero": false}, {"code": "046-002", "name": "Soft Fronds", "collection": "Light Delight", "repeat": "All-over", "season": "Spring", "use": ["Baby & kids", "Bedding", "Wallpaper"], "colorways": 1, "tags": ["kids"], "img": "img/046-002.jpg", "hero": false}, {"code": "046-003", "name": "Peach Hibiscus", "collection": "Light Delight", "repeat": "All-over", "season": "Summer", "use": ["Baby & kids", "Apparel"], "colorways": 1, "tags": ["kids"], "img": "img/046-003.jpg", "hero": false}, {"code": "048-001", "name": "Smiley Hearts", "collection": "Summer Renew", "repeat": "All-over", "season": "All season", "use": ["Apparel", "Accessories"], "colorways": 1, "tags": ["kids"], "img": "img/048-001.jpg", "hero": false}, {"code": "048-002", "name": "Smiley Toss", "collection": "Summer Renew", "repeat": "All-over", "season": "Summer", "use": ["Baby & kids", "Apparel"], "colorways": 1, "tags": ["kids"], "img": "img/048-002.jpg", "hero": false}, {"code": "053-001", "name": "Shophouse", "collection": "Shophouse SG", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Apparel", "Accessories"], "colorways": 2, "tags": ["kids"], "img": "img/053-001.jpg", "hero": false}, {"code": "034-001", "name": "Christmas Doodle", "collection": "Winter", "repeat": "All-over", "season": "Holiday", "use": ["Holiday goods", "Gift wrap"], "colorways": 1, "tags": ["holiday"], "img": "img/034-001.jpg", "hero": false}, {"code": "039-002", "name": "Holiday Letters", "collection": "Winterland", "repeat": "All-over", "season": "Holiday", "use": ["Gift wrap", "Stationery"], "colorways": 1, "tags": ["holiday"], "img": "img/039-002.jpg", "hero": false}, {"code": "039-003", "name": "Ruby Ornaments", "collection": "Winterland", "repeat": "All-over", "season": "Holiday", "use": ["Holiday goods", "Gift wrap"], "colorways": 2, "tags": ["holiday"], "img": "img/039-003.jpg", "hero": false}, {"code": "040-002", "name": "Vintage Ornaments", "collection": "Happy Softy Winter", "repeat": "All-over", "season": "Holiday", "use": ["Holiday goods", "Fabric"], "colorways": 2, "tags": ["holiday"], "img": "img/040-002.jpg", "hero": false}, {"code": "040-003", "name": "Striped Trees", "collection": "Happy Softy Winter", "repeat": "All-over", "season": "Holiday", "use": ["Holiday goods", "Fabric"], "colorways": 4, "tags": ["holiday"], "img": "img/040-003.jpg", "hero": false}, {"code": "040-004", "name": "Dotted Trees", "collection": "Happy Softy Winter", "repeat": "All-over", "season": "Holiday", "use": ["Holiday goods", "Fabric"], "colorways": 2, "tags": ["holiday"], "img": "img/040-004.jpg", "hero": false}, {"code": "040-005", "name": "Chevron Trees", "collection": "Happy Softy Winter", "repeat": "All-over", "season": "Holiday", "use": ["Holiday goods", "Fabric"], "colorways": 3, "tags": ["holiday"], "img": "img/040-005.jpg", "hero": false}, {"code": "040-006", "name": "Tiny Trees", "collection": "Happy Softy Winter", "repeat": "All-over", "season": "Holiday", "use": ["Baby & kids", "Holiday"], "colorways": 1, "tags": ["holiday"], "img": "img/040-006.jpg", "hero": false}, {"code": "040-007", "name": "Holiday Lights", "collection": "Happy Softy Winter", "repeat": "All-over", "season": "Holiday", "use": ["Holiday goods", "Gift wrap"], "colorways": 2, "tags": ["holiday"], "img": "img/040-007.jpg", "hero": false}, {"code": "040-008", "name": "Stocking Garland", "collection": "Happy Softy Winter", "repeat": "Border / stripe", "season": "Holiday", "use": ["Holiday goods", "Fabric"], "colorways": 2, "tags": ["holiday"], "img": "img/040-008.jpg", "hero": false}, {"code": "040-009", "name": "Berry Sprig", "collection": "Happy Softy Winter", "repeat": "All-over", "season": "Holiday", "use": ["Holiday goods"], "colorways": 3, "tags": ["holiday"], "img": "img/040-009.jpg", "hero": false}, {"code": "043-001", "name": "Golden Forest", "collection": "Winter Woodland", "repeat": "All-over", "season": "Winter", "use": ["Fabric", "Baby & kids"], "colorways": 1, "tags": ["holiday"], "img": "img/043-001.jpg", "hero": false}, {"code": "043-004", "name": "Swirl Trees", "collection": "Winter Woodland", "repeat": "All-over", "season": "Winter", "use": ["Baby & kids", "Fabric"], "colorways": 2, "tags": ["holiday"], "img": "img/043-004.jpg", "hero": false}, {"code": "043-005", "name": "Navy Snowflake", "collection": "Winter Woodland", "repeat": "All-over", "season": "Winter", "use": ["Fabric", "Home decor"], "colorways": 1, "tags": ["holiday"], "img": "img/043-005.jpg", "hero": false}, {"code": "043-006", "name": "Stitch Stripe", "collection": "Winter Woodland", "repeat": "Stripe", "season": "Winter", "use": ["Fabric", "Baby & kids"], "colorways": 1, "tags": ["holiday"], "img": "img/043-006.jpg", "hero": false}, {"code": "099-001", "name": "Gift Bows", "collection": "기타", "repeat": "All-over", "season": "Holiday", "use": ["Gift wrap", "Holiday"], "colorways": 1, "tags": ["holiday"], "img": "img/099-001.jpg", "hero": false}, {"code": "015-001", "name": "Summer Squiggle", "collection": "Summer", "repeat": "All-over", "season": "Summer", "use": ["Apparel", "Swimwear", "Accessories"], "colorways": 2, "tags": ["lifestyle"], "img": "img/015-001.jpg", "hero": false}, {"code": "015-002", "name": "Navy Fern", "collection": "Summer", "repeat": "All-over", "season": "All season", "use": ["Apparel", "Bedding"], "colorways": 1, "tags": ["lifestyle"], "img": "img/015-002.jpg", "hero": false}, {"code": "016-001", "name": "Green Brush Stroke", "collection": "Singapore Abstract", "repeat": "All-over", "season": "All season", "use": ["Apparel", "Home decor"], "colorways": 1, "tags": ["lifestyle"], "img": "img/016-001.jpg", "hero": false}, {"code": "017-001", "name": "Coral Leaf", "collection": "Summer Memory", "repeat": "All-over", "season": "Summer", "use": ["Apparel", "Swimwear", "Baby & kids"], "colorways": 2, "tags": ["lifestyle"], "img": "img/017-001.jpg", "hero": false}, {"code": "017-002", "name": "Pebble Lines", "collection": "Summer Memory", "repeat": "All-over", "season": "Summer", "use": ["Apparel", "Home decor"], "colorways": 1, "tags": ["lifestyle"], "img": "img/017-002.jpg", "hero": false}, {"code": "019-001", "name": "My Favorite Things", "collection": "My Favorite Things", "repeat": "All-over", "season": "All season", "use": ["Apparel", "Stationery", "Accessories"], "colorways": 3, "tags": ["lifestyle"], "img": "img/019-001.jpg", "hero": false}, {"code": "019-004", "name": "Eucalyptus Sprig", "collection": "My Favorite Things", "repeat": "All-over", "season": "Spring", "use": ["Bedding", "Apparel"], "colorways": 1, "tags": ["lifestyle"], "img": "img/019-004.jpg", "hero": false}, {"code": "019-005", "name": "Coral Fern", "collection": "My Favorite Things", "repeat": "All-over", "season": "All season", "use": ["Home decor", "Apparel"], "colorways": 2, "tags": ["lifestyle"], "img": "img/019-005.jpg", "hero": false}, {"code": "020-001", "name": "Blue Stamp Blocks", "collection": "Stamp", "repeat": "All-over", "season": "All season", "use": ["Home decor", "Apparel"], "colorways": 1, "tags": ["lifestyle"], "img": "img/020-001.jpg", "hero": false}, {"code": "020-003", "name": "Citrus Slice", "collection": "Stamp", "repeat": "All-over", "season": "Summer", "use": ["Accessories", "Kitchen"], "colorways": 1, "tags": ["lifestyle"], "img": "img/020-003.jpg", "hero": false}, {"code": "021-001", "name": "Folk Stripe", "collection": "Earthy", "repeat": "Border / stripe", "season": "Autumn", "use": ["Home decor", "Apparel"], "colorways": 1, "tags": ["lifestyle"], "img": "img/021-001.jpg", "hero": false}, {"code": "021-002", "name": "Olive Arches", "collection": "Earthy", "repeat": "All-over", "season": "Autumn", "use": ["Home decor", "Apparel"], "colorways": 1, "tags": ["lifestyle"], "img": "img/021-002.jpg", "hero": false}, {"code": "021-003", "name": "Blue Ovals", "collection": "Earthy", "repeat": "All-over", "season": "All season", "use": ["Apparel", "Bedding"], "colorways": 1, "tags": ["lifestyle"], "img": "img/021-003.jpg", "hero": false}, {"code": "021-004", "name": "Sand Lace Arch", "collection": "Earthy", "repeat": "All-over", "season": "All season", "use": ["Home decor"], "colorways": 1, "tags": ["lifestyle"], "img": "img/021-004.jpg", "hero": false}, {"code": "021-005", "name": "Dash Stripe", "collection": "Earthy", "repeat": "Stripe", "season": "All season", "use": ["Apparel", "Baby & kids"], "colorways": 2, "tags": ["lifestyle"], "img": "img/021-005.jpg", "hero": false}, {"code": "023-001", "name": "Vintage Rose", "collection": "Ditsy Florals", "repeat": "All-over", "season": "Spring", "use": ["Apparel"], "colorways": 3, "tags": ["lifestyle"], "img": "img/023-001.jpg", "hero": false}, {"code": "023-002", "name": "Golden Wildflower", "collection": "Ditsy Florals", "repeat": "All-over", "season": "Summer", "use": ["Apparel"], "colorways": 3, "tags": ["lifestyle"], "img": "img/023-002.jpg", "hero": false}, {"code": "025-001", "name": "Dark Rose Garden", "collection": "Backyard Garden", "repeat": "All-over", "season": "Winter", "use": ["Apparel", "Home decor"], "colorways": 1, "tags": ["lifestyle"], "img": "img/025-001.jpg", "hero": false}, {"code": "025-003", "name": "Berry Branch", "collection": "Backyard Garden", "repeat": "All-over", "season": "All season", "use": ["Baby & kids", "Apparel"], "colorways": 3, "tags": ["lifestyle"], "img": "img/025-003.jpg", "hero": false}, {"code": "025-004", "name": "Leaf Toss", "collection": "Backyard Garden", "repeat": "All-over", "season": "Spring", "use": ["Baby & kids", "Bedding"], "colorways": 3, "tags": ["lifestyle"], "img": "img/025-004.jpg", "hero": false}, {"code": "025-006", "name": "Backyard Rose", "collection": "Backyard Garden", "repeat": "All-over", "season": "Spring", "use": ["Baby & kids", "Apparel", "Bedding"], "colorways": 2, "tags": ["lifestyle"], "img": "img/025-006.jpg", "hero": false}, {"code": "030-001", "name": "Disco Block", "collection": "Disco Block", "repeat": "All-over", "season": "All season", "use": ["Apparel", "Accessories"], "colorways": 1, "tags": ["lifestyle"], "img": "img/030-001.jpg", "hero": false}, {"code": "032-001", "name": "Falling Petals", "collection": "Dreamy Dayz", "repeat": "All-over", "season": "Autumn", "use": ["Apparel", "Baby & kids"], "colorways": 1, "tags": ["lifestyle"], "img": "img/032-001.jpg", "hero": false}, {"code": "032-005", "name": "Sunburst", "collection": "Dreamy Dayz", "repeat": "All-over", "season": "Autumn", "use": ["Apparel", "Home decor"], "colorways": 1, "tags": ["lifestyle"], "img": "img/032-005.jpg", "hero": false}, {"code": "032-008", "name": "Scattered Blooms", "collection": "Dreamy Dayz", "repeat": "All-over", "season": "Spring", "use": ["Apparel", "Baby & kids"], "colorways": 2, "tags": ["lifestyle"], "img": "img/032-008.jpg", "hero": false}, {"code": "033-004", "name": "Little Suns", "collection": "Earthy Sunshine", "repeat": "All-over", "season": "Autumn", "use": ["Apparel", "Baby & kids"], "colorways": 1, "tags": ["lifestyle"], "img": "img/033-004.jpg", "hero": false}, {"code": "036-001", "name": "Herb Garden", "collection": "Herb Garden", "repeat": "All-over", "season": "All season", "use": ["Kitchen", "Home decor"], "colorways": 1, "tags": ["lifestyle"], "img": "img/036-001.jpg", "hero": false}, {"code": "042-001", "name": "Night Palms", "collection": "Golden SG", "repeat": "All-over", "season": "All season", "use": ["Home decor", "Wallpaper"], "colorways": 1, "tags": ["lifestyle"], "img": "img/042-001.jpg", "hero": false}, {"code": "042-002", "name": "Line Leaves", "collection": "Golden SG", "repeat": "All-over", "season": "All season", "use": ["Home decor", "Wallpaper"], "colorways": 1, "tags": ["lifestyle"], "img": "img/042-002.jpg", "hero": false}, {"code": "042-003", "name": "Leaf Toss Mint", "collection": "Golden SG", "repeat": "All-over", "season": "All season", "use": ["Home decor", "Bedding"], "colorways": 1, "tags": ["lifestyle"], "img": "img/042-003.jpg", "hero": false}, {"code": "042-004", "name": "Golden Sprig", "collection": "Golden SG", "repeat": "All-over", "season": "All season", "use": ["Home decor"], "colorways": 1, "tags": ["lifestyle"], "img": "img/042-004.jpg", "hero": false}, {"code": "045-003", "name": "Orange Arches", "collection": "CNY", "repeat": "All-over", "season": "All season", "use": ["Apparel", "Home decor"], "colorways": 1, "tags": ["lifestyle"], "img": "img/045-003.jpg", "hero": false}, {"code": "045-005", "name": "Peony Splash", "collection": "CNY", "repeat": "All-over", "season": "Spring", "use": ["Apparel", "Baby & kids"], "colorways": 1, "tags": ["lifestyle"], "img": "img/045-005.jpg", "hero": false}, {"code": "045-006", "name": "Leaf Stripe", "collection": "CNY", "repeat": "Stripe", "season": "All season", "use": ["Apparel", "Accessories"], "colorways": 2, "tags": ["lifestyle"], "img": "img/045-006.jpg", "hero": false}, {"code": "047-001", "name": "Morning Calm", "collection": "Chinoiserie", "repeat": "All-over", "season": "All season", "use": ["Wallpaper", "Home decor"], "colorways": 2, "tags": ["lifestyle"], "img": "img/047-001.jpg", "hero": false}, {"code": "050-001", "name": "Blue Lily", "collection": "Blue", "repeat": "All-over", "season": "Summer", "use": ["Apparel", "Home decor", "Wallpaper"], "colorways": 2, "tags": ["lifestyle"], "img": "img/050-001.jpg", "hero": false}, {"code": "052-001", "name": "Shell Sketch", "collection": "Beach", "repeat": "All-over", "season": "Summer", "use": ["Apparel", "Accessories"], "colorways": 1, "tags": ["lifestyle"], "img": "img/052-001.jpg", "hero": false}], "mockups": [{"img": "img/mock-wallpaper.jpg", "cap": "Morning Calm as wallpaper"}, {"img": "img/mock-bandana.jpg", "cap": "Shophouse on a bandana"}, {"img": "img/mock-dress.jpg", "cap": "Vintage Rose on a dress"}, {"img": "img/mock-fabric.jpg", "cap": "Winter Woodland printed on fabric"}], "process": [{"sketch": "img/sketch-peony.jpg", "code": "045-005"}, {"sketch": "img/sketch-trees.jpg", "code": "043-004"}, {"sketch": "img/sketch-confetti.jpg", "code": "046-001"}]};
+const items=DATA.items;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('#countAll').textContent=items.length;
+const groups=[['all','All'],['kids','Kids'],['holiday','Holiday'],['lifestyle','Lifestyle']];
+let filter='all', shown=[], cur=0;
+function renderFilters(){
+  $('#filters').innerHTML=groups.map(([k,l])=>{
+    const n=k==='all'?items.length:items.filter(i=>i.tags.includes(k)).length;
+    return `<button class="chip" type="button" data-k="${k}" aria-pressed="${k===filter}">${l}<small>${n}</small></button>`}).join('');
+}
+function renderGrid(){
+  shown=filter==='all'?items:items.filter(i=>i.tags.includes(filter));
+  $('#grid').innerHTML=shown.map((it,ix)=>`<button class="card" type="button" data-ix="${ix}">
+    <img src="${it.img}" alt="${esc(it.name)} pattern" loading="lazy" width="800" height="800">
+    <span class="tagline"><span class="code">${it.code}</span><span class="cname">${esc(it.name)}</span></span>
+    <span class="cmeta">${esc(it.collection)} · ${esc(it.repeat)}${it.colorways>1?` · ${it.colorways} colourways`:''}</span></button>`).join('');
+}
+function setFilter(k){filter=k;renderFilters();renderGrid()}
+$('#filters').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){setFilter(b.dataset.k);try{history.replaceState(null,'',b.dataset.k==='all'?'#patterns':'#'+b.dataset.k)}catch(_){}}});
+$('#grid').addEventListener('click',e=>{const c=e.target.closest('.card');if(c)openItem(+c.dataset.ix)});
+function openItem(ix){
+  cur=(ix+shown.length)%shown.length;const it=shown[cur];
+  $('#dImg').src=it.img;$('#dImg').alt=it.name+' pattern';$('#dCode').textContent=it.code;$('#dName').textContent=it.name;
+  $('#dColl').textContent=it.collection;$('#dRep').textContent=it.repeat;$('#dSea').textContent=it.season;
+  $('#dUse').textContent=it.use.join(', ');$('#dCw').textContent=it.colorways;$('#dStatus').textContent='';
+  const d=$('#dlg');if(!d.open)d.showModal();
+}
+$('#dClose').onclick=()=>$('#dlg').close();
+$('#dPrev').onclick=()=>openItem(cur-1);$('#dNext').onclick=()=>openItem(cur+1);
+$('#dlg').addEventListener('click',e=>{if(e.target===$('#dlg'))$('#dlg').close()});
+document.addEventListener('keydown',e=>{if(!$('#dlg').open)return;if(e.key==='ArrowRight')openItem(cur+1);if(e.key==='ArrowLeft')openItem(cur-1)});
+function copy(text,statusEl,okMsg,fallbackEl){
+  const done=()=>{statusEl.textContent=okMsg};
+  const fail=()=>{statusEl.textContent='Copy is blocked here. Select the text and copy it yourself.';
+    if(fallbackEl){const r=document.createRange();r.selectNodeContents(fallbackEl);const s=getSelection();s.removeAllRanges();s.addRange(r)}};
+  try{navigator.clipboard.writeText(text).then(done,fail)}catch(_){fail()}
+}
+$('#dCopy').onclick=()=>{const it=shown[cur];copy(`Hello atelieroll, we would like to license ${it.code} ${it.name}. Product: ___ · Quantity: ___ · Region: ___`,$('#dStatus'),'Copied. Paste it into an email to atelieroll.info@gmail.com.',$('#dName'))};
+$('#copyMail').onclick=()=>copy('atelieroll.info@gmail.com',$('#mailStatus'),'Email address copied.',$('#mail'));
+// hero patch
+const heroes=items.filter(i=>i.hero);
+$('#patch').innerHTML=heroes.map(it=>`<button type="button" style="background-image:url('${it.img}')" aria-label="${esc(it.code+' '+it.name)}" data-code="${it.code}"></button>`).join('');
+$('#patch').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;setFilter('all');openItem(items.findIndex(i=>i.code===b.dataset.code))});
+// mockups & process
+$('#mocks').innerHTML=DATA.mockups.map(m=>`<figure><img src="${m.img}" alt="${esc(m.cap)}" loading="lazy"><figcaption>${esc(m.cap)}</figcaption></figure>`).join('');
+$('#steps').innerHTML=DATA.process.map(p=>{const it=items.find(i=>i.code===p.code);return `<figure style="margin:0"><div class="pair"><img src="${p.sketch}" alt="Hand-painted sketch" loading="lazy"><span class="arrow">→</span><img src="${it.img}" alt="${esc(it.name)} pattern" loading="lazy"></div><figcaption>Sketch to <span class="code">${it.code}</span> ${esc(it.name)}</figcaption></figure>`}).join('');
+// initial
+const h=(location.hash||'').slice(1);
+renderFilters();
+if(['kids','holiday','lifestyle'].includes(h)){setFilter(h);requestAnimationFrame(()=>document.getElementById('patterns').scrollIntoView())}else renderGrid();
+</script>
+
+</body>
+</html>
