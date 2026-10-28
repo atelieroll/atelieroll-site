@@ -14,20 +14,21 @@
 <body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
 /* Warm editorial portfolio: real products first (like a studio lookbook), then a sortable pattern library. */
 :root{
-  --paper:#fbf6ee; --surface:#fffdf9; --soft:#f4eadb; --ink:#2b2420; --muted:#76665b; --line:#e8dccb;
-  --accent:#c4553b; --accent-ink:#ffffff; --sage:#e3ead9;
-  --display:"Young Serif",Georgia,"Times New Roman",serif;
+  --paper:#fbf7f1; --surface:#fffdf9; --soft:#f5ece0; --ink:#2e2620; --muted:#6f645b; --line:#ebe2d6;
+  --accent:#c06a4f; --accent-ink:#ffffff; --sage:#f5ece0;
+  --display:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mark:"Lora",Georgia,serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#1c1714; --surface:#241e1a; --soft:#2e2621; --ink:#f3ebe2; --muted:#bba99b; --line:#3a312b;
-  --accent:#ec8a70; --accent-ink:#1c1714; --sage:#2a2e25; color-scheme:dark}}
-:root[data-theme="dark"]{--paper:#1c1714; --surface:#241e1a; --soft:#2e2621; --ink:#f3ebe2; --muted:#bba99b; --line:#3a312b;
-  --accent:#ec8a70; --accent-ink:#1c1714; --sage:#2a2e25; color-scheme:dark}
+  --paper:#1c1714; --surface:#241e1a; --soft:#2b231e; --ink:#f3ebe2; --muted:#bba99b; --line:#3a312b;
+  --accent:#e59478; --accent-ink:#1c1714; --sage:#2b231e; color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#1c1714; --surface:#241e1a; --soft:#2b231e; --ink:#f3ebe2; --muted:#bba99b; --line:#3a312b;
+  --accent:#e59478; --accent-ink:#1c1714; --sage:#2b231e; color-scheme:dark}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
 .wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -161,6 +162,40 @@ dialog::backdrop{background:rgba(30,20,15,.6)}
   .mark{font-size:21px}
   .sort{width:100%}
 }
+
+/* catalogue look: soft sans, italic wordmark, rounded photos, ink buttons */
+h1,h2,h3{font-weight:600;letter-spacing:-.015em}
+.mark{font-family:var(--mark);font-style:italic;font-weight:500;letter-spacing:-.01em}
+.eyebrow{font-size:11.5px;letter-spacing:.2em}
+.btn{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.hero .wrap{display:block;padding-block:24px 56px}
+.cover{position:relative;border-radius:22px;overflow:hidden;min-height:560px;display:flex;align-items:flex-end;padding:32px}
+.coverimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.covertag{position:absolute;right:20px;top:20px;background:var(--paper);color:var(--ink);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.cover .herocard{position:relative;background:var(--paper);border-radius:18px;padding:30px 32px;max-width:500px}
+.hero h1{font-size:clamp(32px,4vw,48px);line-height:1.08;margin-top:12px}
+.hero p.lede{font-size:16.5px;margin-top:14px}
+.cta{margin-top:24px}
+.clients b{font-family:var(--body);font-weight:600;font-size:17px}
+.pmain img{border-radius:18px}
+.thumbs img{border-radius:12px}
+.post img{border-radius:16px}
+.card img{border-radius:12px}
+.pair img{border-radius:12px}
+.way{border-radius:18px}
+.price{font-family:var(--body);font-weight:600;font-size:22px}
+.post h3{font-family:var(--body);font-weight:600;font-size:17px}
+#news{background:var(--soft)}
+#licensing{background:var(--paper)}
+.way{background:var(--surface)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+@media (max-width:700px){
+  .cover{min-height:0;display:block;padding:0;border-radius:18px;background:var(--soft)}
+  .coverimg{position:static;height:300px}
+  .cover .herocard{max-width:none;border-radius:0;padding:22px 20px 24px;background:var(--surface)}
+  .covertag{top:14px;right:14px}
+}
 </style>
 
 <header class="top"><div class="wrap">
@@ -172,13 +207,16 @@ dialog::backdrop{background:rgba(30,20,15,.6)}
 
 <main id="top">
 <div class="hero"><div class="wrap">
-  <div>
-    <div class="eyebrow">Surface pattern design · Seoul</div>
-    <h1>Hand-drawn prints for children’s brands.</h1>
-    <p class="lede">Painted by designer Minhae Kim and licensed for kids’ apparel, bedding, fabric and stationery. Pick a ready-made print, or commission a collection made only for you.</p>
-    <div class="cta"><a class="btn" href="#patterns">Browse patterns</a><a class="btn ghost" href="#work">See it on product</a></div>
+  <div class="cover">
+    <img class="coverimg" src="img/work/nursery-rainbow.jpg" alt="Nursery wallpaper in the Soft Rainbow print">
+    <span class="covertag">Soft Rainbow · 027-003</span>
+    <div class="herocard">
+      <div class="eyebrow">Surface pattern design · Seoul</div>
+      <h1>Hand-painted prints for children’s brands</h1>
+      <p class="lede">Painted by designer Minhae Kim and licensed for baby bedding, kidswear, fabric and stationery. Pick a ready-made print, or commission a collection made only for you.</p>
+      <div class="cta"><a class="btn" href="#patterns">Browse patterns</a><a class="btn ghost" href="#work">See it on product</a></div>
+    </div>
   </div>
-  <div class="mosaic" id="mosaic"></div>
 </div></div>
 
 <div class="clients"><div class="wrap" id="clients"></div></div>
@@ -232,7 +270,7 @@ dialog::backdrop{background:rgba(30,20,15,.6)}
     <div class="way">
       <div class="eyebrow">Custom</div>
       <h3>A collection for your brand</h3>
-      <p class="price">from US$850</p>
+      <p class="price">from US$800</p>
       <p>New artwork drawn for your season, exclusive to you.</p>
       <ul><li>Hero print plus coordinating patterns</li><li>Two rounds of revisions</li><li>Custom illustration too: tee graphics, stickers, packaging</li></ul>
     </div>
@@ -285,7 +323,6 @@ const PAGE=window.matchMedia('(max-width:520px)').matches?10:12;
 let theme='all', sortBy='new', limit=PAGE, shown=[], cur=0;
 
 // hero + clients
-$('#mosaic').innerHTML=DATA.hero.map(h=>`<figure><img src="${h.img}" alt="${esc(h.alt)}"><figcaption>${esc(h.cap)}</figcaption></figure>`).join('');
 $('#clients').innerHTML='<span>Prints on products for</span>'+DATA.clients.map(c=>`<b>${esc(c)}</b>`).join('');
 
 // featured projects
